@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script>
+    function check_answers()
+    {
+        var city1 = $("input:radio[name=city1]:checked").val();
+        var city2 = $("input:radio[name=city2]:checked").val();
+        var city3 = $("input:radio[name=city3]:checked").val();
+
+        var result = (city1 == "d" ? 1 : 0) + (city2 == "a" ? 1 : 0) + (city3 == "b" ? 1 : 0); 
+
+        alert("You got " + result+" answers correct");
+    }
+</script>
+
+
+<div class="jumbotron">
+    <h1>Quesitionaire</h1>
+    <p class="lead">This is the great question and answer game built by Avinash R</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Which city is the capital of Australia?</h2>
+        <form>
+            <div class="row">
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city1" value="a" id="a">
+                    <Label for="a">Bangalore</Label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city1" value="b" id="b">
+                    <Label for="b">London</Label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city1" value="c" id="c">
+                    <label for="c">Sidney</label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city1" value="d" id="d">
+                    <label for="d">Canberra</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>In Computer Science, what does CPU stand for?</h2>
+        <form>
+            <div class="row">
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city2" value="a" id="a">
+                    <Label for="a">Central Processing Unit</Label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city2" value="b" id="b">
+                    <Label for="b">Central Packaging Unit</Label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city2" value="c" id="c">
+                    <label for="c">Combined Processing Unit</label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city2" value="d" id="d">
+                    <label for="d">Combined Packaging unit</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <h2>In Indian politics, what does UPA stand for?</h2>
+        <form>
+            <div class="row">
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city3" value="a" id="a">
+                    <Label for="a">Useless Politics Alliance</Label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city3" value="b" id="b">
+                    <Label for="b">United Progressive Aliance</Label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city3" value="c" id="c">
+                    <label for="c">Uttar Pradesh Association</label>
+                </div>
+                <div class="col-md-4 form-control">
+                    <input type="radio" name="city3" value="d" id="d">
+                    <label for="d">United Passive Alliance</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <hr/>
+
+    <div class="row">
+        <div class="col-md-4">
+            <button onclick="check_answers()">Check Answers</button>
+        </div>
+        </div>
+
+</div>
